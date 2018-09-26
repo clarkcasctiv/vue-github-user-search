@@ -1,25 +1,26 @@
 <template>
   <div id="app">
-   <Search/>
+    <Search />
+    <User />
   </div>
 </template>
 
 <script>
-import Search from "./components/Search";
-import User from "./components/User";
+import Search from './components/Search';
+import User from './components/User';
 
 export default {
   name: 'app',
   components: {
-    User,Search
+    User,
+    Search
   }
 };
 </script>
 
-<style scoped>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -font-smoothing: antialiased;
-  margin: 10px;
-}
+<style lang="stylus">
+#app
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  font-smoothing antialiased
+  margin 10px
 </style>
