@@ -49,109 +49,111 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="less">
 .github-card {
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-    background: #fff;
-    color: #000;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  position: relative;
+
+  h1 {
+    margin: 16px 0 20px;
+    line-height: 1;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .background {
+    filter: blur(10px) opacity(50%);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+  }
+
+  .content {
     position: relative;
+    z-index: 2;
 
-    h1 {
-        margin: 16px 0 20px;
-        line-height: 1;
-        font-size: 24px;
-        font-weight: 500;
+    .avatar {
+      display: inline-block;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 100%;
+      text-decoration: none;
+
+      img {
+        display: block;
+        width: 80px;
+        height: 80px;
+      }
     }
 
-    .background {
-        filter: blur(10px) opacity(50%);
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-size: cover;
-        background-position: center;
-        background-color: #fff;
+    .status {
+      background: white;
     }
 
-    .content {
-        position: relative;
-        z-index: 2;
+    ul {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: gray;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+      zoom: 1;
 
-        .avatar {
-            display: inline-block;
-            overflow: hidden;
-            background: #fff;
-            border-radius: 100%;
-            text-decoration: none;
-
-            img {
-                display: block;
-                width: 80px;
-                height: 80px;
-            }
-        }
-
-        .status {
-            background: white;
-        }
-
-        ul {
-            text-transform: uppercase;
-            font-size: 12px;
-            color: gray;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            border-top: 1px solid lightgray;
-            border-bottom: 1px solid lightgray;
-            zoom: 1;
-
-            &:after {
-                display: block;
-                content: '';
-                clear: both;
-            }
-        }
-
-        li {
-            width: 33%;
-            float: left;
-            padding: 8px 0;
-            box-shadow: 1px 0 0 #eee;
-
-            &:last-of-type {
-                box-shadow: none;
-            }
-        }
-
-        strong {
-            display: block;
-            color: #292f33;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        a {
-            color: #707070;
-            text-decoration: none;
-
-            &:hover {
-                color: #4183c4;
-            }
-        }
+      &:after {
+        display: block;
+        content: '';
+        clear: both;
+      }
     }
+
+    li {
+      width: 33%;
+      float: left;
+      padding: 8px 0;
+      box-shadow: 1px 0 0 #eee;
+
+      &:last-of-type {
+        box-shadow: none;
+      }
+    }
+
+    strong {
+      display: block;
+      color: #292f33;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #707070;
+      text-decoration: none;
+
+      &:hover {
+        color: #4183c4;
+      }
+    }
+  }
 }
 
-.fade-enter-active, .fade-leave-active {
-    transition: opacity 0.5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
 
-.fade-enter, .fade-leave-to {
-    opacity: 0;
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

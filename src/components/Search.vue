@@ -20,7 +20,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['searchQuery', 'search']),
+    ...mapActions(['setSearchQuery', 'search']),
     debouncedSearch: debounce(function() {
       this.search();
     }, 500)
@@ -28,11 +28,11 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 input {
-    width: 100%;
-    font-size: 16px;
-    text-align: center;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
 }
 </style>
 
